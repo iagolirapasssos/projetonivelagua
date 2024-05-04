@@ -2,14 +2,14 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase
 import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js';
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY_PLACEHOLDER,
-  authDomain: process.env.AUTH_DOMAIN_PLACEHOLDER,
-  databaseURL: process.env.DATABASE_URL_PLACEHOLDER,
-  projectId: process.env.PROJECT_ID_PLACEHOLDER,
-  storageBucket: process.env.STORAGE_BUCKET_PLACEHOLDER,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID_PLACEHOLDER,
-  appId: process.env.APP_ID_PLACEHOLDER,
-  measurementId: process.env.MEASUREMENT_ID_PLACEHOLDER
+  apiKey: API_KEY_PLACEHOLDER,
+  authDomain: AUTH_DOMAIN_PLACEHOLDER,
+  databaseURL: DATABASE_URL_PLACEHOLDER,
+  projectId: PROJECT_ID_PLACEHOLDER,
+  storageBucket: STORAGE_BUCKET_PLACEHOLDER,
+  messagingSenderId: MESSAGING_SENDER_ID_PLACEHOLDER,
+  appId: APP_ID_PLACEHOLDER,
+  measurementId: MEASUREMENT_ID_PLACEHOLDER
 };
 
 const app = initializeApp(firebaseConfig);
