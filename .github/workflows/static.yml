@@ -5,6 +5,21 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+  workflow_call:
+    secrets:
+      access-token:
+        description: 'Your secret'
+        required: false
+        run: |
+          sed -i 's/API_KEY_PLACEHOLDER/${{ secrets.API_KEY }}/' ./script.js
+          sed -i 's/APP_ID_PLACEHOLDER/${{ secrets.APP_ID }}/' ./script.js
+          sed -i 's/AUTH_DOMAIN_PLACEHOLDER/${{ secrets.AUTH_DOMAIN }}/' ./script.js
+          sed -i 's/DATABASE_URL_PLACEHOLDER/${{ secrets.DATABASE_URL }}/' ./script.js
+          sed -i 's/MEASUREMENT_ID_PLACEHOLDER/${{ secrets.MEASUREMENT_ID }}/' ./script.js
+          sed -i 's/MESSAGING_SENDER_ID_PLACEHOLDER/${{ secrets.MESSAGING_SENDER_ID }}/' ./script.js
+          sed -i 's/PROJECT_ID_PLACEHOLDER/${{ secrets.PROJECT_ID }}/' ./script.js
+          sed -i 's/STORAGE_BUCKET_PLACEHOLDER/${{ secrets.STORAGE_BUCKET }}/' ./script.js
+
 permissions:
   contents: read
   pages: write
@@ -23,18 +38,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Replace Firebase Configuration
-        run: |
-          sed -i 's/API_KEY_PLACEHOLDER/${{ secrets.FIREBASE_API_KEY }}/' ./script.js
-          sed -i 's/APP_ID_PLACEHOLDER/${{ secrets.FIREBASE_APP_ID }}/' ./script.js
-          sed -i 's/AUTH_DOMAIN_PLACEHOLDER/${{ secrets.FIREBASE_AUTH_DOMAIN }}/' ./script.js
-          sed -i 's/DATABASE_URL_PLACEHOLDER/${{ secrets.FIREBASE_DATABASE_URL }}/' ./script.js
-          sed -i 's/MEASUREMENT_ID_PLACEHOLDER/${{ secrets.FIREBASE_MEASUREMENT_ID }}/' ./script.js
-          sed -i 's/MESSAGING_SENDER_ID_PLACEHOLDER/${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}/' ./script.js
-          sed -i 's/PROJECT_ID_PLACEHOLDER/${{ secrets.FIREBASE_PROJECT_ID }}/' ./script.js
-          sed -i 's/STORAGE_BUCKET_PLACEHOLDER/${{ secrets.FIREBASE_STORAGE_BUCKET }}/' ./script.js
-
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
