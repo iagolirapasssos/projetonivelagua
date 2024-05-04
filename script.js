@@ -2,14 +2,14 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase
 import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js';
 
 const firebaseConfig = {
-  apiKey: API_KEY_PLACEHOLDER,
-  authDomain: AUTH_DOMAIN_PLACEHOLDER,
-  databaseURL: DATABASE_URL_PLACEHOLDER,
-  projectId: PROJECT_ID_PLACEHOLDER,
-  storageBucket: STORAGE_BUCKET_PLACEHOLDER,
-  messagingSenderId: MESSAGING_SENDER_ID_PLACEHOLDER,
-  appId: APP_ID_PLACEHOLDER,
-  measurementId: MEASUREMENT_ID_PLACEHOLDER
+  apiKey: "AIzaSyCPrQakf2NRFrpu1vMQe52nooIq1tTb0Po",
+  authDomain: "leitordenivelagua.firebaseapp.com",
+  databaseURL: "https://leitordenivelagua-default-rtdb.firebaseio.com",
+  projectId: "leitordenivelagua",
+  storageBucket: "leitordenivelagua.appspot.com",
+  messagingSenderId: "949893225484",
+  appId: "1:949893225484:web:9c474215874eb9044ce229",
+  measurementId: "G-HJCLD30N60"
 };
 
 const app = initializeApp(firebaseConfig);
