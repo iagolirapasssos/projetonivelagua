@@ -2,15 +2,16 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase
 import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCPrQakf2NRFrpu1vMQe52nooIq1tTb0Po",
-  authDomain: "leitordenivelagua.firebaseapp.com",
-  databaseURL: "https://leitordenivelagua-default-rtdb.firebaseio.com",
-  projectId: "leitordenivelagua",
-  storageBucket: "leitordenivelagua.appspot.com",
-  messagingSenderId: "949893225484",
-  appId: "1:949893225484:web:9c474215874eb9044ce229",
-  measurementId: "G-HJCLD30N60"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
+
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
