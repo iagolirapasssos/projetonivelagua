@@ -1,6 +1,5 @@
 // Configuração do Firebase já estará carregada via HTML
 const firebaseConfig = {
-<<<<<<< HEAD:src/script.js
   apiKey: process.env.API_KEY_PLACEHOLDER,
   authDomain: process.env.AUTH_DOMAIN_PLACEHOLDER,
   databaseURL: process.env.DATABASE_URL_PLACEHOLDER,
@@ -13,20 +12,6 @@ const firebaseConfig = {
 
 const app = firebase.initializeApp(firebaseConfig);
 const database = firebase.database(app);
-=======
-  apiKey: "AIzaSyCPrQakf2NRFrpu1vMQe52nooIq1tTb0Po",
-  authDomain: "leitordenivelagua.firebaseapp.com",
-  databaseURL: "https://leitordenivelagua-default-rtdb.firebaseio.com",
-  projectId: "leitordenivelagua",
-  storageBucket: "leitordenivelagua.appspot.com",
-  messagingSenderId: "949893225484",
-  appId: "1:949893225484:web:9c474215874eb9044ce229",
-  measurementId: "G-HJCLD30N60"
-};
-
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
->>>>>>> 3b2c17ca6540f3819a9b2563bba917d882df7aac:script.js
 
 let myChart = null;
 let allSensorsChart = null;
