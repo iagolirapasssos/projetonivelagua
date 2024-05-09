@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/script.js',  // Certifique-se de que esse é o caminho correto para seu arquivo de entrada principal
+  entry: '/src/script.js',  // Certifique-se de que esse é o caminho correto para seu arquivo de entrada principal
   output: {
     path: path.resolve(__dirname, 'dist'),  // Este é o diretório onde os arquivos resultantes serão colocados
     filename: 'bundle.js'  // O nome do arquivo de saída
